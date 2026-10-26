@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --background: 150 20% 98%;
+  --foreground: 162 10% 16%;
+  --card: 0 0% 100%;
+  --card-foreground: 162 10% 16%;
+  --primary: 168 35% 36%;
+  --primary-foreground: 0 0% 100%;
+  --muted: 160 16% 92%;
+  --muted-foreground: 165 8% 40%;
+  --border: 160 16% 85%;
+  --accent: 42 36% 88%;
+  --accent-foreground: 32 35% 25%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: "IBM Plex Sans", "Avenir Next", system-ui, sans-serif;
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-14px) translateX(8px);
+  }
+}
+
+@keyframes float-reverse {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(14px) translateX(-10px);
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 10s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 12s ease-in-out infinite;
+}
